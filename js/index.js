@@ -23,6 +23,11 @@ databaseRef.once('value').then(function(snapshot)
 
         //$("#posts").append(currentPost);
     }
+
+    // document.write(databaseValues['Posts']['post 1']['Question']);
+    $("#postButton").click(function(){
+        console.log("buttonClick")
+    })
 });
 
 function createPost(post) {
@@ -38,3 +43,6 @@ function createPost(post) {
 function createChoice(choice){
     return `<p>${choice.name}</p>`
 }
+
+
+
