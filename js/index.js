@@ -15,5 +15,26 @@ databaseRef.once('value').then(function(snapshot)
     const databaseValues = snapshot.val();
     
     console.log(databaseValues);
-    document.write(databaseValues['Posts']['post 1']['Question']);
+    
+    for(let post in databaseValues.Posts){
+        console.log("Post: ", post);
+        
+        //let currentPost = createPost(post);
+
+        //$("#posts").append(currentPost);
+    }
 });
+
+function createPost(post) {
+    let choices = post.Choices.map(createChoice);
+    
+    return `<div>
+        <h3>${post.Question}</h3>
+        ${choices.join()}
+    </div>`
+}
+
+
+function createChoice(choice){
+    return `<p>${choice.name}</p>`
+}
