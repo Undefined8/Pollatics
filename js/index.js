@@ -15,5 +15,11 @@ databaseRef.once('value').then(function(snapshot)
     const databaseValues = snapshot.val();
     
     console.log(databaseValues);
-    document.write(databaseValues['Posts']['post 1']['Question']);
+    // document.write(databaseValues['Posts']['post 1']['Question']);
+    $("#postButton").click(function(){
+      console.log("buttonClick")
+    })
+    
 });
+
+
