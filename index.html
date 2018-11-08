@@ -10,17 +10,43 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   </head>
+  
+
+  
   <body>
-    <div id="posts"></div>
+    <div id="Post"></div>
+    <!-- nav bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">pollatics</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+            <div class="col-sm-3 col-md-3 pull-right">
+              <div class="navbar-form" role="search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Topics" name="srch-term" id="search-term">
+                  <div class="input-group-btn">
+                    <button id="search" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+      </nav>
+    <!-- input Field -->
     <div id="main">
       <div class="container">
           <div class="row">
               <div class="col-md-4"></div>
-              <div class="col-md-4">
-                  <input id="post"><button id="postButton">Post</button>
-              </div>
+              <div class="col-md-4"><input id="post"><button id="postButton">Post</button></div>
               <div class="col-md-4"></div>
-            </div>
+          </div>
       </div>
 
     
