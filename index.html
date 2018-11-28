@@ -29,9 +29,9 @@
           <div class="col-sm-3 col-md-3 pull-right">
             <div class="navbar-form" role="search">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Topics" name="srch-term" id="search-term">
+                <!-- <input type="text" class="form-control" placeholder="Topics" name="srch-term" id="search-term">
                 <div class="input-group-btn">
-                  <button id="search" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                  <button id="search" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button> -->
 
                 </div>
               </div>
@@ -43,26 +43,29 @@
       <!-- /.container -->
     </nav>
     <!-- input Field -->
-      <div class="row">
-        <div class="col-md-4">
-          <div id="Posts"></div>
-        </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"></span>
-            </div>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-            <button id="postPoll" class="btn btn-primary">Post Poll</button>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"></span>
           </div>
+          <textarea id = "Question" class="form-control" aria-label="With textarea" placeholder="Question"></textarea>
+          <input id = "Choice1" class="form-control" aria-label="With textarea" placeholder="Choice"></textarea>
+          <input id = "Choice2" class="form-control" aria-label="With textarea" placeholder="Choice"></textarea>
+          <button id="postPoll" class="btn btn-primary">------------------------------Post Poll------------------------------</button>
+          
         </div>
+        
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><div id="Posts"></div></div>
         <div class="col-md-4"></div>
       </div>
+     
 
 
   </div>

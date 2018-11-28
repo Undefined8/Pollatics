@@ -4,10 +4,11 @@ let databaseRef = database.ref('/');
 
 let main = document.getElementById('main');
 
-databaseRef.once('value').then(function(snapshot)
+databaseRef.on('value',function(snapshot)
 {
     const databaseValues = snapshot.val();
-
+    $("#Posts").empty();
+  
     for(let postKey in databaseValues.Posts){
 
         
@@ -19,9 +20,10 @@ databaseRef.once('value').then(function(snapshot)
     }
 
     // document.write(databaseValues['Posts']['post 1']['Question']);
-    $("#postPoll").click(function(){
-        console.log("buttonClick")
-    })
+    // The post button 
+    // $("#postPoll").click(function(){
+    //     console.log("buttonClick")
+    // })
 });
 
 function createPost(post) {
@@ -42,8 +44,37 @@ function createPost(post) {
 
 
 function createChoice(choice){
-    return `<p>${choice.name}</p>`
+    return `<p id="${choice.name}" >${choice.name}</p>`
 }
 
+$("#postPoll").click(function(){
+    var ref = database.ref("/Posts");
+    var Question = $("#Question").val();
+    var Choice1 = $("#Choice1").val();
+    var Choice2 = $("#Choice2").val();
+    ref.push({
+        Question:Question,
+        Choices:{
+            "Option 1":{
+                name:Choice1
+            },
+            "Option 2":{
+                name:Choice2
+            }
+        }
+
+
+    })
+
+    console.log("buttonClick")
+
+})
+
+$(document).on("click","#choice",function(){
+    $("#choice").css("color","red")
+    console.log("testing")
+   
+
+})
 
 
