@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Studio 1</title>
+  <title>Pollatics</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,53 +16,57 @@
 
 
 <body>
-  <!-- <div id="Post"></div> -->
-  <!-- nav bar -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">pollatics</a>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        <div class="col-sm-3 col-md-3 pull-right">
-          <div class="navbar-form" role="search">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Topics" name="srch-term" id="search-term">
-              <div class="input-group-btn">
-                <button id="search" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                
+  <div class="container">
+    <!-- nav bar -->
+    <nav class="navbar navbar-inverse"  role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Pollatics</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <div class="col-sm-3 col-md-3 pull-right">
+            <div class="navbar-form" role="search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Topics" name="srch-term" id="search-term">
+                <div class="input-group-btn">
+                  <button id="search" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- /.navbar-collapse -->
       </div>
-      <!-- /.navbar-collapse-->
-    </div>
-    <!-- /.container -->
-  </nav>
-  <!-- input Field -->
-  <section id="cover">
-    <div id="main">
-      <div class="container" id="">
-        <div class="row">
-          <div class="col-xl-12"></div>
+      <!-- /.container -->
+    </nav>
+    <!-- input Field -->
+      <div class="row">
+        <div class="col-md-4">
+          <div id="Posts"></div>
         </div>
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-4"><input id="post"><button id="post">Post</button></div>
-          <div class="col-md-4"></div>
-
-        </div>
-
-
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
       </div>
-  </section>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"></span>
+            </div>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+            <button id="postPoll" class="btn btn-primary">Post Poll</button>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
 
 
-
-
- 
+  </div>
+  
 
 
 
