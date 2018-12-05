@@ -10,13 +10,7 @@ databaseRef.on('value',function(snapshot)
     $("#Posts").empty();
   
     for(let postKey in databaseValues.Posts){
-
-        
-        let currentPost = createPost(databaseValues.Posts[postKey]);
-        
-        console.log("Current Post: ", currentPost);
-
-        $("#Posts").append(currentPost);
+        createPost(databaseValues.Posts[postKey]);
     }
 
     // document.write(databaseValues['Posts']['post 1']['Question']);
@@ -31,20 +25,36 @@ function createPost(post) {
     console.log("Post!!!");
 
     let choices = [];
+    let result = $(`<div><h3>${post.Question}</h3></div>`)
+
+    
 
     for(let choiceKey in post.Choices){
-        choices.push(createChoice(post.Choices[choiceKey]));
+        result.append(createChoice(post.Choices[choiceKey]));
     }
 
-    return `<div>
-        <h3>${post.Question}</h3>
-        ${choices.join("")}
-    </div>`
+    $("#Posts").append(result);
+
+    console.log("Current Post:", $("#Posts"));
 }
 
+function onResponse(buttonRef){
+    console.log('responded');
+}
 
 function createChoice(choice){
-    return `<p id="${choice.name}" >${choice.name}</p>`
+
+    let button = $(`<button id="${choice.name}">${choice.name}</button>`);
+
+    let choiceDiv = `<div class="choice"></div>`;
+
+    button.click(() => {
+        console.log("responded");
+    })
+
+    console.log($(choiceDiv).append(button));
+
+    return $(choiceDiv).append(button);
 }
 
 $("#postPoll").click(function(){
@@ -69,6 +79,7 @@ $("#postPoll").click(function(){
     console.log("buttonClick")
 
 })
+
 
 $(document).on("click","#choice",function(){
     $("#choice").css("color","red")
